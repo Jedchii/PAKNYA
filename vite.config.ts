@@ -4,8 +4,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    // Use relative base path for compatibility with all deployment platforms
     return {
-      base: '/PAKNYA/',
+      base: './',
       server: {
         port: 3000,
         host: '0.0.0.0',
